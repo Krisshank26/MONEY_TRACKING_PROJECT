@@ -267,7 +267,7 @@ for(let i= 0 ; i< localStorage.length ; ++i )
         oes.value= expStore ; 
         exparr.push([eda, edb, edc, oep, oes ] ) ; 
         expSumInc= expSumInc+ parseInt(edc.innerText ) ; 
-        allExp.innerText= "Total Income: $ "+ expSumInc ; 
+        allExp.innerText= "Total Expense: $ "+ expSumInc ; 
         total(incsum, expSumInc ) ; 
         if(exparr.length> 0 ) 
         { 
