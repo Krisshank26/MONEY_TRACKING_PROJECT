@@ -1,0 +1,112 @@
+<!DOCTYPE html > 
+<html lang="en" > 
+    <head> 
+        <meta charset="UTF-8" > 
+        <meta name="viewport" content="width= device-width, initial-scale= 1.0" > 
+        <title>Money Expense Tracker</title> 
+        
+    </head> 
+    <body> 
+        <nav> 
+            <h2>Kalnv, Balances Convert !</h2> 
+        </nav> 
+        <div class="income-page" > 
+            <h1>Income</h1> 
+            <div class="category" > 
+                <div class="enter-income-input" style="color: red ; display: none ; font-size: 25px " >Enter / Choose Category Or Enter Valid Amount</div> 
+                <div class="enter-income-category" style="color: red ; display: none ; font-size: 18px ">Choose / Enter A Category</div> 
+                <div class="category-pre" > 
+                    <h3>Category</h3> 
+                    <select class="category-input-pre" > 
+                        <option value="Choose" selected >Choose</option> 
+                    </select> 
+                </div> 
+                <div class="category-n" > 
+                    <h3>Add New Category</h3> 
+                    <input type="text" class="input-category-n" placeholder="New Income Source" > 
+                    <div class="category-display-message" style="color: red ; font-size: 20px ; display: none ">Category Already Present!</div>
+                    <h3>Amount (Add (+) / Subtract (-) )</h3> 
+                    <input type="number" class="input-amount-category-n" placeholder="e.g. +500(or only 500 to add Amount 500 ) and -400(to subtract Amount 400 )" > 
+                    <div class="amount-less-category" style="color: red ; font-size: 18px ; display: none " >Invalid Sum!</div> 
+                    <button id="hash" class="apply-category-n" >Apply</button> 
+                    <div class="amount-decrease" style="color: red ; display: none ; font-size: 18px ; " >Amount Becomes 0 or Precedes It. Please Delete The Category or Lower Amount!</div> 
+                </div> 
+                <div class="income-category-delete" > 
+                    <h2>Delete Income</h2> 
+                    <select class="delete-inc" > 
+                        <option value="Choose" >Choose</option> 
+                    </select> 
+                    <button class="delete-category-inc">Delete</button> 
+                </div> 
+            </div> 
+            <table border="bold" style="display: none" class="income-table-a" > 
+                <thead> 
+                    <th>SL NO</th> 
+                    <th>Income Category</th> 
+                    <th>Amount</th> 
+                </thead> 
+                <tbody class="income-table" > 
+                </tbody> 
+            </table> 
+        </div> 
+        <div class="expense-page" > 
+            <h1>Expense</h1> 
+            <div class="category" > 
+                <div class="expense-message-input" style="color: red ; display: none ; font-size: 25px ; " >Enter / Choose Category Or Enter Valid Amount</div> 
+                <div class="expense-message-category" style="color: red ; display: none ; font-size: 18px " >Choose / Enter A Category</div> 
+                <h3>Category</h3> 
+                <select class="expense-category-en" > 
+                    <option>Choose</option> 
+                </select> 
+                <h3>Add New Category</h3> 
+                <input type="text" class="input-expense-category" placeholder="Add New Expense" > 
+                <div class="expense-category-present" style="color: red ; display: none ; font-size: 18px " >Category Already Present!</div> 
+                <h3>Amount ( Add (+) / Subtract (-) ) </h3> 
+                <input type="number" class="expense-category-amount" placeholder="e.g. +2000(or only 2000 to add ) and -900(to subtract ) " > 
+                <div class="amount-expense-display" style="color: red ; display: none ; font-size: 25px " >Invalid Sum!</div> 
+                <button class="apply-expense" >Apply</button> 
+                <div class="amount-expense-decrease" style="color: red ; display: none ; font-size: 18px " >Amount Becomes 0 Or Precedes It. Please Delete Category Or Lower Amount!</div> 
+                <div class="expense-category-delete" > 
+                    <h2>Delete Expense</h2> 
+                    <select class="expense-delete-category" > 
+                        <option>Choose</option> 
+                    </select> 
+                    <button class="expense-delete-cat" >Delete</button> 
+                </div> 
+            </div> 
+            <table border="bold" style="display: none" class="expense-table-a" > 
+                <thead> 
+                    <th>SL NO</th> 
+                    <th>Expense Category</th> 
+                    <th>Amount</th> 
+                </thead> 
+                <tbody class="expense-table" > 
+                </tbody> 
+            </table> 
+        </div> 
+        <div class="balance-page" > 
+            <h1>Balance</h1> 
+            <h4 class="total-inc">Total Income: $ 0</h4> 
+            <h4 class="total-exp">Total Expense: $ 0</h4> 
+            <h4 class="balance-all" >Balance: $ 0</h4> 
+        </div> 
+        <div class="money-convert" > 
+            <h1>Currency Converter</h1> 
+            <input type="number" class="input-convert-amount" placeholder="100" > 
+            <div class="amount-display-currency" style="color: red ; font-size: 18px ; display: none ; " >Please Enter Valid Amount Here!</div> 
+            <select class="currency-select" > 
+                <option>Choose</option> 
+            </select> 
+            <p>To</p> 
+            <select class="currency-to" > 
+                <option>Choose</option> 
+            </select> 
+            <button class="convert-money-button" >Convert</button> 
+            <div class="money-convert-display" >100 USD = 8760 INR</div> 
+        </div> 
+        <script src="api-key.js" ></script> 
+        <script src="currencyCodes.js" ></script> 
+        <script src="script.js" ></script> 
+    </body> 
+    <link rel="stylesheet" href="style.css" > 
+</html> 
